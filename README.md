@@ -111,5 +111,6 @@ y_pred_test = SVM.predict(X_test_scaled)
 <p>This project demonstrates the use of both deep learning (CNN) and traditional machine learning (SVM) methods for detecting synthetic images. The CNN model is more complex and typically yields better results, while the SVM model provides a simpler, linear approach to the problem.</p>
 
 
+
 </body>
 </html>
