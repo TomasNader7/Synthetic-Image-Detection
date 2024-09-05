@@ -104,35 +104,37 @@ y_pred_test = SVM.predict(X_test_scaled)
 
 <h2>Results</h2>
 
-<p>Both models will output key performance metrics, including accuracy, precision, recall, and AUC, and will visualize the results through plots and confusion matrices.</p>
-<ul>
-    <li><strong>CNN MODEL</strong></li>
-</ul>
-<p>As we can observe in the Confusion Matrix for the CNN Model, the model presents a strong performance in classifying in a correct way both positive and negative instances. The model outputs 432 false positives indicating the model has good precision. Moreover, the high number of false negatives compared to false positives suggests that the model is precise, although it can miss some positive instances.</p>
+<p>Both models output key performance metrics, including accuracy, precision, recall, and AUC, and visualize the results through plots and confusion matrices.</p>
 
-<div style="text-align: center;">
+<!-- CNN Model Section -->
+<h3 style="margin-top: 20px;">CNN Model</h3>
+<p>The <strong>CNN Model</strong> shows strong performance in classifying both positive and negative instances. In the Confusion Matrix below, we observe 432 false positives, indicating the model has good precision. However, the higher number of false negatives compared to false positives suggests that while the model is precise, it can miss some positive instances.</p>
+
+<div style="text-align: center; margin-top: 10px; margin-bottom: 20px;">
     <img src="https://github.com/user-attachments/assets/566c62f4-5e11-43b2-aee8-9a2d70534033" alt="Confusion Matrix CNN" style="width: 50%; height: auto;">
 </div>
-<p>Throughout the training process, the accuracy of the validation set remains comparatively constant. It starts at about 82%, varies slightly, and ends at about 85%. Despite a minor increasing trend, validation accuracy does not increase as much as training accuracy, which could indicate that the model is starting to overfit the training set. We can observe it in the following figure:</p>
-<div style="text-align: center;">
+
+<p>Throughout the training process, the accuracy on the validation set remains comparatively constant, starting at about 82%, varying slightly, and ending around 85%. Despite a minor increasing trend, the validation accuracy does not increase as much as training accuracy, indicating potential overfitting. The following figure illustrates the accuracy and loss curves during training:</p>
+
+<div style="text-align: center; margin-top: 10px; margin-bottom: 20px;">
     <img src="https://github.com/user-attachments/assets/a62218b7-1f25-4871-a350-da4d1c3fafb8" alt="Accuracy and Loss Curve Graph CNN" style="width: 50%; height: auto;">
 </div>
-<p></p>
-<ul>
-    <li><strong>SVM MODEL</strong></li>
-</ul>
 
-<p>The Support Vector Machine classified 72 instances correctly as true positives and 743 as true negatives. On the other hand, it classified as false negatives 257 instances and 238 as false positives. Overall, this model shows a good performance in classifying instances. However, there is room for improvement as the false negatives and false positives are still relatively high if we look at it from the standpoint of achieving a very efficient model.</p>
+<!-- SVM Model Section -->
+<h3 style="margin-top: 20px;">SVM Model</h3>
+<p>The <strong>SVM Model</strong> correctly classified 72 instances as true positives and 743 as true negatives. However, it also produced 257 false negatives and 238 false positives. While the overall performance is solid, there is room for improvement as the false negatives and false positives remain relatively high, indicating that further tuning could yield a more efficient model.</p>
 
-<div style="text-align: center;">
+<div style="text-align: center; margin-top: 10px; margin-bottom: 20px;">
     <img src="https://github.com/user-attachments/assets/43c55d0e-95a8-42db-b046-922861951a6c" alt="Confusion Matrix SVM" style="width: 50%; height: auto;">
 </div>
 
-<p>Additional insight of how the Support Vector Machine performed is also provided in the ROC Curve figure. The ROC Curve graph provides a visual representation of the trade-off between the True Positive Rate and the False Positive Rate for a binary classifier. With an AUC of 0.83, the ROC curve shows that it performs well. This suggests a high degree of accuracy in identifying synthetic images with a low false positive rate. The curve demonstrates how the model performs noticeably better than random guesses, which is essential for accurate synthetic identification of images.</p>
+<p>The ROC Curve for the SVM Model provides additional insight into the model's performance. With an AUC of 0.83, the curve demonstrates the trade-off between True Positive Rate and False Positive Rate, showcasing a high level of accuracy in identifying synthetic images. This indicates a strong performance, significantly better than random guessing.</p>
 
-<div style="text-align: center;">
+<div style="text-align: center; margin-top: 10px; margin-bottom: 20px;">
     <img src="https://github.com/user-attachments/assets/7c2cfeaa-6c9b-4696-bebd-4cc2c5bef03f" alt="ROC Curve" style="width: 50%; height: auto;">
 </div>
+
+
 
 <h2>Conclusion</h2>
 
